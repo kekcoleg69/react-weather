@@ -1,4 +1,4 @@
-import { React } from "react";
+import { React, useState } from "react";
 
 function Form({ setCity }) {
   const [inputCity, setInputCity] = useState("");

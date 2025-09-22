@@ -3,9 +3,10 @@ import axios from "axios";
 
 import Form from "./components/Form";
 import Weather from "./components/Weather";
-const KEY = "245e0d699c0743fd81455823250909";
-const LINK = "http://api.weatherapi.com/v1/current.json";
+const API_KEY = process.env.REACT_APP_API_KEY;
+const API_URL = process.env.REACT_APP_API_URL;
 
+console.log(API_KEY);
 function App() {
   const [city, setCity] = useState("");
   const [weatherData, setWeatherData] = useState({});
@@ -18,9 +19,9 @@ function App() {
       try {
         setLoading(true);
         setError(false);
-        const response = await axios.get(LINK, {
+        const response = await axios.get(API_URL, {
           params: {
-            key: KEY,
+            key: API_KEY,
             q: city,
             lang: "ru",
           },
