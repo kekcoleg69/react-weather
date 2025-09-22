@@ -1,6 +1,8 @@
 import { React } from "react";
 
-function Form({ inputCity, setInputCity, setCity }) {
+function Form({ setCity }) {
+  const [inputCity, setInputCity] = useState("");
+
   return (
     <form>
       <input

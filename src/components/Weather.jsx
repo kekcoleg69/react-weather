@@ -1,7 +1,7 @@
 import React from "react";
 
-function Weather({ weatherData, flag, error }) {
-  if (flag) {
+function Weather({ weatherData, loading, error }) {
+  if (loading) {
     return <div>Подождите, выполняется запрос...</div>;
   } else if (error) {
     return <div>Ошибка запроса.Пожалуйста,введите корректный город</div>;
